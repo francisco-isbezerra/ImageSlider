@@ -21,7 +21,7 @@ export default function App() {
         <section aria-label="Galeria da vida selvagem">
           <p>EM DESTAQUE / PANDA-GIGANTE</p>
           <img
-            src="/images/image-3.jpg"
+            src="/images/Panda.png"
             alt="Pandas descansando em seu habitat"
             width="460"
           />
