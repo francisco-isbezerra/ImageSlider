@@ -9,10 +9,22 @@ export default function App() {
       {/* Cabeçalho */}
       <header className="w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pt-8 pb-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <span className="h-3 w-3 rounded-full bg-mauve animate-pulse" aria-hidden="true" />
-          <strong className="text-xl sm:text-2xl font-black tracking-[0.2em] text-ink font-display">
-            WILD <span className="text-mauve font-light">/</span> STORIES
-          </strong>
+          <div className="relative group cursor-pointer">
+            {/* Anel gradiente giratório no hover */}
+            <div className="absolute -inset-[3px] rounded-full bg-gradient-to-tr from-mauve via-purple-400 to-pink-400 opacity-60 blur-[2px] group-hover:opacity-100 group-hover:blur-[3px] transition-all duration-500" aria-hidden="true" />
+            {/* Ponto de status pulsante */}
+            <span className="absolute -top-0.5 -right-0.5 h-3.5 w-3.5 rounded-full bg-emerald-400 animate-pulse ring-2 ring-lavender z-20" aria-hidden="true" />
+            <img
+              src="/images/avatar.png"
+              alt="Avatar do autor"
+              className="relative z-10 h-14 w-14 sm:h-16 sm:w-16 rounded-full object-cover ring-2 ring-lavender shadow-lg shadow-mauve/30 transition-transform duration-300 group-hover:scale-105"
+            />
+          </div>
+          {/* Nome/título exibido ao lado do avatar */}
+          <div className="hidden sm:flex flex-col leading-tight">
+            <span className="text-sm font-bold text-ink tracking-wide">Francisco</span>
+            <span className="text-[11px] font-medium text-mauve tracking-widest uppercase">Wild Stories</span>
+          </div>
         </div>
 
         <nav aria-label="Navegação principal" className="flex items-center gap-6 text-xs sm:text-sm font-semibold tracking-widest uppercase text-muted-violet">
